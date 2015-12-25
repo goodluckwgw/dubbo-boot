@@ -1,0 +1,13 @@
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\config\DruidConfiguration.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\domain\Message.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\service\BookAdminService.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\manager\AccountManagerImpl.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\repository\MessageDao.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\DubboWithSpringbootApplication.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\service\AccountService.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\domain\Book.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\manager\BookManagerImpl.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\repository\BookDao.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\service\BookBorrowService.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\domain\Account.java
+D:\Workspaces\boot-parent\boot-impl\src\main\java\com\github\bootimpl\repository\AccountDao.java

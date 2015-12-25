@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+    http://www.springframework.org/schema/jdbc
+	http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+	http://code.alibabatech.com/schema/dubbo
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+	<!--载入properties配置文件，以${key}的方式引用 -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:dubbo.properties</value>
+			</list>
+		</property>
+	</bean> 
+
+	<dubbo:application name="${dubbo.application.name}"
+		owner="${dubbo.application.owner}" version="${dubbo.application.version}" />
+
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry address="${dubbo.registry.address}" />
+
+	<!-- 开发阶段，关闭监控中心 -->
+	<!-- <dubbo:monitor protocol="registry"></dubbo:monitor> -->
+
+	<dubbo:protocol name="dubbo" host="${dubbo.protocol.host}"
+		port="${dubbo.protocol.port}" server="netty" />
+
+	<!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
+	<!-- <dubbo:annotation package="com.chinasi.mobile.business" /> -->
+
+	<!-- dubbo 服务 -->
+	<dubbo:reference interface="com.github.bootapi.api.AccountManager"
+		id="accountManager" timeout="30000" check="false"></dubbo:reference>
+		
+	<dubbo:reference interface="com.github.bootapi.api.BookManager"
+		id="bookManager" timeout="30000" check="false"></dubbo:reference>
+</beans>
