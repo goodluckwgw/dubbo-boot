@@ -9,6 +9,9 @@
 
 
 	<!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
-	<dubbo:annotation package="com.github.bootimpl.manager" />
+	<!-- <dubbo:annotation package="com.github.bootimpl.manager" /> -->
+	
+	<bean id="genericService" class="com.github.bootimpl.manager.MyGenericService" />
+<dubbo:service interface="com.alibaba.dubbo.rpc.service.GenericService" ref="genericService" />
 	
 </beans>
