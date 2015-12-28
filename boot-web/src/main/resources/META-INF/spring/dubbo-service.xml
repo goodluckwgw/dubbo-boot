@@ -40,12 +40,13 @@
 		port="${dubbo.protocol.port}" server="netty" />
 
 	<!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
-	<!-- <dubbo:annotation package="com.chinasi.mobile.business" /> -->
 
 	<!-- dubbo 服务 -->
-	<dubbo:reference interface="com.github.bootapi.api.AccountManager"
+<!-- 	<dubbo:reference interface="com.github.bootapi.api.AccountManager"
 		id="accountManager" timeout="30000" check="false"></dubbo:reference>
 		
 	<dubbo:reference interface="com.github.bootapi.api.BookManager"
-		id="bookManager" timeout="30000" check="false"></dubbo:reference>
+		id="bookManager" timeout="30000" check="false"></dubbo:reference> -->
+		
+		<dubbo:reference id="barService" interface="com.alibaba.dubbo.rpc.service.GenericService" generic="true" />
 </beans>
