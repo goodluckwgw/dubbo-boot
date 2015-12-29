@@ -12,6 +12,6 @@
 	<!-- <dubbo:annotation package="com.github.bootimpl.manager" /> -->
 	
 	<bean id="genericService" class="com.github.bootimpl.manager.MyGenericService" />
-<dubbo:service interface="com.alibaba.dubbo.rpc.service.GenericService" ref="genericService" />
+<dubbo:service interface="com.github.bootapi.api.BarService" ref="genericService" />
 	
 </beans>

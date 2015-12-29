@@ -1,21 +1,22 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>boot-parent</artifactId>
-    <groupId>com.github</groupId>
-    <version>0.0.1-SNAPSHOT</version>
-    <relativePath>..</relativePath>
-  </parent>
-  <groupId>com.github.bootweb</groupId>
-  <artifactId>boot-web</artifactId>
-  <packaging>war</packaging>
-  
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>boot-parent</artifactId>
+		<groupId>com.github</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<groupId>com.github.bootweb</groupId>
+	<artifactId>boot-web</artifactId>
+	<packaging>war</packaging>
+
+	<properties>
 		<spring-boot.version>1.2.8.RELEASE</spring-boot.version>
 	</properties>
-  
-  <dependencies>
-  <dependency>
+
+	<dependencies>
+		<dependency>
 			<groupId>com.github.bootcommon</groupId>
 			<artifactId>boot-common</artifactId>
 			<version>0.1</version>
@@ -27,22 +28,25 @@
 			<version>0.1</version>
 			<optional>true</optional>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+
 		<!-- SPRING BOOT web -->
-		
-<!-- 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-			<version>${spring-boot.version}</version>
-		</dependency> -->
-		
+
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter</artifactId> 
+			<version>${spring-boot.version}</version> </dependency> -->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>${spring-boot.version}</version>
 		</dependency>
-		
-		
+
+
 		<!-- dubbo -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -84,9 +88,9 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- logback dubbo也使用logback -->
-		
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>log4j-over-slf4j</artifactId>
@@ -107,8 +111,8 @@
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 		</dependency>
-  </dependencies>
-  <build>
+	</dependencies>
+	<build>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>

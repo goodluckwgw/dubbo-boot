@@ -48,5 +48,5 @@
 	<dubbo:reference interface="com.github.bootapi.api.BookManager"
 		id="bookManager" timeout="30000" check="false"></dubbo:reference> -->
 		
-		<dubbo:reference id="barService" interface="com.alibaba.dubbo.rpc.service.GenericService" generic="true" />
+		<dubbo:reference id="barService" interface="com.github.bootapi.api.BarService" generic="true" />
 </beans>
