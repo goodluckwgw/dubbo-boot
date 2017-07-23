@@ -1,4 +1,7 @@
-dubbo-boot是基于spring boot 和dubbo服务框架构建的，项目采用Maven分模块构建，其示例取之于springside,目前代码还比较简单，仅仅把二者加以整合，接下来想把rop框架引入，做一套开放网关服务(https://github.com/itstamen/rop)
+dubbo-boot是基于spring boot 和dubbo服务框架构建的，项目采用Maven分模块构建，其示例取之于springside,目前代码还比较简单，仅仅把二者加以整合，接下来想把rop框架引入，做一套开放网关服务(https://github.com/itstamen/rop)    
+
+RoadMap  
+
 最近准备完善该项目，扩展dubbo，实现对服务的编排
 系统设计框架图
 ![image](https://raw.githubusercontent.com/goodluckwgw/dubbo-boot/master/image/%E7%BB%98%E5%9B%BE1.jpg)
