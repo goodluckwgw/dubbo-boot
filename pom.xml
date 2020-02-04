@@ -10,7 +10,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<dubbo.version>2.5.3</dubbo.version>
 		<zkclient.version>0.7</zkclient.version>
-		<zk.version>3.4.6</zk.version>
+		<zk.version>3.4.14</zk.version>
 		<commons-lang3.version>3.4</commons-lang3.version>
 		<beanutils>1.9.2</beanutils>
 		<guava.version>18.0</guava.version>
